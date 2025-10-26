@@ -60,7 +60,7 @@
         ],
         "total_cost": 30.0,
         "operations_count": 37,
-        "execution_time_ms": 0.0661
+        "execution_time_ms": 0.0435
       },
       "kruskal": {
         "mst_edges": [
@@ -116,7 +116,7 @@
         ],
         "total_cost": 29.0,
         "operations_count": 41,
-        "execution_time_ms": 0.0965
+        "execution_time_ms": 0.0364
       }
     },
     {
@@ -186,7 +186,7 @@
         ],
         "total_cost": 27.0,
         "operations_count": 39,
-        "execution_time_ms": 0.0417
+        "execution_time_ms": 0.0373
       },
       "kruskal": {
         "mst_edges": [
@@ -249,7 +249,7 @@
         ],
         "total_cost": 24.0,
         "operations_count": 37,
-        "execution_time_ms": 0.0336
+        "execution_time_ms": 0.0282
       }
     }
   ]

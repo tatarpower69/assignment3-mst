@@ -1,4 +1,4 @@
-{
+  {
   "results": [
     {
       "graph_id": 1,
@@ -39,7 +39,7 @@
         ],
         "total_cost": 17.0,
         "operations_count": 27,
-        "execution_time_ms": 4.6344
+        "execution_time_ms": 4.5673
       },
       "kruskal": {
         "mst_edges": [
@@ -74,7 +74,7 @@
         ],
         "total_cost": 16.0,
         "operations_count": 22,
-        "execution_time_ms": 1.9754
+        "execution_time_ms": 1.7633
       }
     },
     {
@@ -165,7 +165,7 @@
         ],
         "total_cost": 15.0,
         "operations_count": 21,
-        "execution_time_ms": 0.0309
+        "execution_time_ms": 0.0288
       }
     }
   ]
