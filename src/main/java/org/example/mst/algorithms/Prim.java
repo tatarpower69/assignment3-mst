@@ -47,7 +47,7 @@ public class Prim {
                 if (!used[to] && e.weight < minEdge[to]) {
                     minEdge[to] = e.weight;
                     parent[to] = v;
-                    pq.add(new int[]{to, 0});
+                    pq.add(new int[]{to, (int) minEdge[to]});
                     oc.incOther();
                 }
             }
