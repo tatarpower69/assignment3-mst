@@ -1,0 +1,123 @@
+{
+  "results": [
+    {
+      "graph_id": 1,
+      "input_stats": {
+        "vertices": 8,
+        "edges": 9
+      },
+      "prim": {
+        "mst_edges": [
+          {
+            "u": 0,
+            "v": 1,
+            "weight": 4.0,
+            "from": "A",
+            "to": "B"
+          },
+          {
+            "u": 1,
+            "v": 3,
+            "weight": 7.0,
+            "from": "B",
+            "to": "D"
+          },
+          {
+            "u": 3,
+            "v": 2,
+            "weight": 2.0,
+            "from": "D",
+            "to": "C"
+          },
+          {
+            "u": 2,
+            "v": 5,
+            "weight": 4.0,
+            "from": "C",
+            "to": "F"
+          },
+          {
+            "u": 5,
+            "v": 6,
+            "weight": 2.0,
+            "from": "F",
+            "to": "G"
+          },
+          {
+            "u": 6,
+            "v": 7,
+            "weight": 1.0,
+            "from": "G",
+            "to": "H"
+          },
+          {
+            "u": 3,
+            "v": 4,
+            "weight": 9.0,
+            "from": "D",
+            "to": "E"
+          }
+        ],
+        "total_cost": 29.0,
+        "operations_count": 35,
+        "execution_time_ms": 0.0336
+      },
+      "kruskal": {
+        "mst_edges": [
+          {
+            "u": 6,
+            "v": 7,
+            "weight": 1.0,
+            "from": "G",
+            "to": "H"
+          },
+          {
+            "u": 2,
+            "v": 3,
+            "weight": 2.0,
+            "from": "C",
+            "to": "D"
+          },
+          {
+            "u": 5,
+            "v": 6,
+            "weight": 2.0,
+            "from": "F",
+            "to": "G"
+          },
+          {
+            "u": 0,
+            "v": 1,
+            "weight": 4.0,
+            "from": "A",
+            "to": "B"
+          },
+          {
+            "u": 2,
+            "v": 5,
+            "weight": 4.0,
+            "from": "C",
+            "to": "F"
+          },
+          {
+            "u": 1,
+            "v": 3,
+            "weight": 7.0,
+            "from": "B",
+            "to": "D"
+          },
+          {
+            "u": 3,
+            "v": 4,
+            "weight": 9.0,
+            "from": "D",
+            "to": "E"
+          }
+        ],
+        "total_cost": 29.0,
+        "operations_count": 36,
+        "execution_time_ms": 0.0308
+      }
+    }
+  ]
+}
