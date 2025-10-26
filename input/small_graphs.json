@@ -12,6 +12,19 @@
         {"from": "C", "to": "E", "weight": 8},
         {"from": "D", "to": "E", "weight": 6}
       ]
+    },
+    {
+      "id": 2,
+      "nodes": ["A", "B", "C", "D", "E", "F"],
+      "edges": [
+        {"from": "A", "to": "B", "weight": 5},
+        {"from": "A", "to": "C", "weight": 3},
+        {"from": "B", "to": "D", "weight": 6},
+        {"from": "C", "to": "E", "weight": 4},
+        {"from": "D", "to": "E", "weight": 2},
+        {"from": "E", "to": "F", "weight": 1},
+        {"from": "B", "to": "F", "weight": 7}
+      ]
     }
   ]
 }
