@@ -11,30 +11,28 @@ import java.util.*;
 
 public class App {
     public static void main(String[] args) throws IOException {
+        if (args.length < 2 || args.length % 2 != 0) {
+            System.err.println("Usage: java -jar mst.jar <input1.json> <output1.json> [<input2.json> <output2.json> ...]");
+            System.exit(1);
+        }
+
         System.out.println("=== MST Comparison (Prim vs Kruskal) ===");
 
+        // input/output pares
+        for (int i = 0; i < args.length; i += 2) {
+            String inputPath = args[i];
+            String outputPath = args[i + 1];
 
-        String[][] filePairs = {
-                {"input/small_graphs.json", "output/output_small_graphs.json"},
-                {"input/medium_graphs.json", "output/output_medium_graphs.json"},
-                {"input/large_graphs.json", "output/output_large_graphs.json"}
-        };
+            System.out.println("\n--- Processing file pair ---");
+            System.out.println("Input:  " + inputPath);
+            System.out.println("Output: " + outputPath);
 
-
-        for (String[] pair : filePairs) {
-            String inputPath = pair[0];
-            String outputPath = pair[1];
-
-            System.out.println("\n=== Processing file: " + inputPath + " ===");
-
-            // graphs
             var graphs = GraphUtils.readGraphsFromFile(inputPath);
             JsonArray results = new JsonArray();
 
-            for (int i = 0; i < graphs.size(); i++) {
-                Graph g = graphs.get(i);
-                System.out.println("Processing graph #" + (i + 1) +
-                        " with " + g.vertices() + " vertices and " + g.edgesCount() + " edges");
+            for (int gIndex = 0; gIndex < graphs.size(); gIndex++) {
+                Graph g = graphs.get(gIndex);
+                System.out.println("\nGraph #" + (gIndex + 1) + " (" + g.vertices() + " vertices, " + g.edgesCount() + " edges)");
 
                 // Prim
                 OperationCounter primCounter = new OperationCounter();
@@ -48,9 +46,10 @@ public class App {
                 var kruskalRes = Kruskal.run(g, kruskalCounter);
                 long endKruskal = System.nanoTime();
 
-                // formating JSON
+                // forming JSON
                 JsonObject resultObj = new JsonObject();
-                resultObj.addProperty("graph_id", i + 1);
+                resultObj.addProperty("graph_id", gIndex + 1);
+
 
                 JsonObject inputStats = new JsonObject();
                 inputStats.addProperty("vertices", g.vertices());
@@ -77,17 +76,16 @@ public class App {
             JsonObject root = new JsonObject();
             root.add("results", results);
 
-            // output
+
             Path outPath = Paths.get(outputPath).getParent();
             if (outPath != null && !Files.exists(outPath)) {
                 Files.createDirectories(outPath);
             }
 
-            // result
             GraphUtils.writeOutput(outputPath, root);
             System.out.println(" Results saved to " + outputPath);
         }
 
-        System.out.println("\n All graphs processed successfully!");
+        System.out.println("\n All files processed successfully!");
     }
 }

@@ -1,11 +1,12 @@
 {
   "graphs": [
     {
-      "id": 2,
+      "id": 1,
       "nodes": ["A", "B", "C", "D", "E", "F", "G", "H"],
       "edges": [
         {"from": "A", "to": "B", "weight": 4},
         {"from": "A", "to": "C", "weight": 8},
+        {"from": "B", "to": "C", "weight": 9},
         {"from": "B", "to": "D", "weight": 7},
         {"from": "C", "to": "D", "weight": 2},
         {"from": "C", "to": "F", "weight": 4},
@@ -13,6 +14,22 @@
         {"from": "E", "to": "F", "weight": 10},
         {"from": "F", "to": "G", "weight": 2},
         {"from": "G", "to": "H", "weight": 1}
+      ]
+    },
+    {
+      "id": 2,
+      "nodes": ["A", "B", "C", "D", "E", "F", "G", "H", "I"],
+      "edges": [
+        {"from": "A", "to": "B", "weight": 2},
+        {"from": "A", "to": "C", "weight": 4},
+        {"from": "B", "to": "D", "weight": 7},
+        {"from": "B", "to": "E", "weight": 3},
+        {"from": "C", "to": "F", "weight": 6},
+        {"from": "D", "to": "G", "weight": 5},
+        {"from": "E", "to": "H", "weight": 4},
+        {"from": "F", "to": "I", "weight": 2},
+        {"from": "G", "to": "H", "weight": 1},
+        {"from": "H", "to": "I", "weight": 3}
       ]
     }
   ]
